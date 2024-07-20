@@ -25,8 +25,8 @@ The following container paths can be used to mount a dedicated volume or to cust
 
 | Path | Description |
 | ---- | ----------- |
-| /etc/php7/fpm/php.ini | PHP configuration |
-| /var/lib/php7 | Session save path |
+| /etc/php8/fpm/php.ini | PHP configuration |
+| /var/lib/php8 | Session save path |
 | /var/log/php-fpm | Error and slow logs |
 
 ## Useful links
