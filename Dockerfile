@@ -7,8 +7,9 @@ RUN zypper in -y php8-fpm FastCGI &&\
 
 # Files
 COPY ./root /
-RUN mkdir -p /var/run/php-fpm /var/log/php-fpm &&\
-	chmod -R a+rwX /var/run/php-fpm /var/log/php-fpm
+RUN confd -onetime -backend env &&\
+	mkdir -p /var/run/php-fpm /var/log/php-fpm &&\
+	chmod -R a+rwX /etc/php8 /var/run/php-fpm /var/log/php-fpm
 
 # Ports
 EXPOSE 9000
